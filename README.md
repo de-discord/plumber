@@ -1,0 +1,1 @@
+A basic Discord bot to manage content such as rules, resources, and FAQs for the Data Engineering Discord server.
