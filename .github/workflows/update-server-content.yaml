@@ -1,0 +1,17 @@
+name: Update server content based on tracked YAML files
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: build-image
+        run: docker build . -t plumber
+      - name: ls-files
+        run: cd plumber/yaml && ls
