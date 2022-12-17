@@ -26,4 +26,4 @@ jobs:
         if: steps.changed-files-specific.outputs.any_changed == 'true'
         run: |
           echo "One or more files in the yaml folder has changed."
-          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} client.py ${{ steps.changed-files-specific.outputs.all_changed_files }}
+          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py ${{ steps.changed-files-specific.outputs.all_changed_files }}
