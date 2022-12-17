@@ -6,6 +6,8 @@ import constants
 
 def parse_yaml(filepath: str) -> dict:
     """Reads a yaml file and returns a dictionary"""
+    # Remove 'plumber/' prefix
+    filepath = filepath.split("/", maxsplit=1)[1]
     with open(filepath, "r") as file:
         content = yaml.safe_load(file)
 
