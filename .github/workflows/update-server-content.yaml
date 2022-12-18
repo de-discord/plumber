@@ -24,7 +24,7 @@ jobs:
   build-and-update:
     needs: get-changed-files
     runs-on: ubuntu-latest
-    if: needs.get-changed-files.outputs.any_modified
+    if: needs.get-changed-files.outputs.any_modified == 'true'
     steps:
       - name: checkout
         uses: actions/checkout@v3
