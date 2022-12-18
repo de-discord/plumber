@@ -18,6 +18,8 @@ jobs:
         with:
           files: |
             plumber/yaml/**
+      - name: Print any_modified
+        run: echo ${{ steps.changed-files-specific.outputs.any_modified }}
 
   build-and-update:
     needs: get-changed-files
