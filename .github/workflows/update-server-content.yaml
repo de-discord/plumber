@@ -28,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ needs.get-changed-files.outputs.files_have_changed }} == 'true'
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: build-image
         run: docker build . -t plumber
       - name: Run step if any file(s) in the yaml folder change
