@@ -1,0 +1,24 @@
+name: Star a manual run
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: The file selected to trigger an update in its corresponding channel
+        required: true
+        type: choice
+        options:
+          - "faq"
+          - "resources"
+          - "rules"
+
+jobs:
+  build-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: build-image
+        run: docker build . -t plumber
+      - name: run-client
+        run: |
+          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py plumber/yaml/${{ inputs.file }}.yaml
