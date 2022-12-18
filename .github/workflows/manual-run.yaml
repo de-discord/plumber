@@ -1,4 +1,4 @@
-name: Star a manual run
+name: Start a manual run
 on:
   workflow_dispatch:
     inputs:
