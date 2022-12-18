@@ -9,3 +9,24 @@ Data Fundamentals (good entrypoint):
 Software Engineering:
   - "- Python Crash Course - Eric Matthes"
   - "- The Pragmatic Programmer - Andrew Hunt & David Thomas"
+
+Platform:
+  - "- Terraform: Up & Running - Yevgeniy Brikman"
+
+Management:
+  - "- Team Topologies - Matthew Skelton & Manuel Pais"
+  - "- Radical Candor - Kim Scott"
+  - "- Data Teams - Jesse Anderson"
+  - "- Practical DataOps - Harvinder Atwal"
+
+Resources:
+  - "- https://brendanthompson.com/posts/2021/11/my-terraform-development-workflow"
+  - "- https://www.terraform-best-practices.com/"
+  - "- https://github.com/open-guides/og-aws"
+  - "- https://awesomedataengineering.com/"
+  - "- https://github.com/opendatadiscovery/awesome-data-catalogs"
+  - "- https://github.com/datastacktv/data-engineer-roadmap"
+  - "- https://www.moderndatastack.xyz/stacks"
+  - "- https://www.secoda.co/glossary"
+  - "- https://www.gentlydownthe.stream/"
+  - "- https://b-greve.gitbook.io/beginners-guide-to-clean-data/"
