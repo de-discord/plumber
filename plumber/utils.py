@@ -37,7 +37,7 @@ def create_embed(content: dict) -> discord.Embed:
         embed.add_field(name=k, value="\n".join(v), inline=False)
 
     embed.set_footer(
-        text="Find this bot's source code at https://github.com/de-discord/plumber"
+        text="---\nFind this bot's source code at https://github.com/de-discord/plumber"
     )
 
     return embed
