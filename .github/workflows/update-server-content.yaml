@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v34
       - name: Get changed files in the yaml folder
         id: changed-files-specific
         uses: tj-actions/changed-files@v34
@@ -24,9 +21,9 @@ jobs:
             plumber/yaml/**
 
   build-and-update:
-    needs: get-changed-files
+    needs: changed-files-specific
     runs-on: ubuntu-latest
-    if: ${{ needs.get-changed-files.outputs.files_have_changed }} == 'true'
+    if: ${{ needs.changed-files-specific.outputs.files_have_changed }} == 'true'
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -35,4 +32,4 @@ jobs:
       - name: Run step if any file(s) in the yaml folder change
         run: |
           echo "One or more files in the yaml folder has changed."
-          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py ${{ needs.get-changed-files.outputs.changed_files }}
+          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py ${{ needs.changed-files-specific.outputs.changed_files }}
