@@ -8,7 +8,6 @@ jobs:
   get-changed-files:
     runs-on: ubuntu-latest
     outputs:
-      files_have_changed: ${{ steps.changed-files-specific.outputs.any_changed }}
       changed_files: ${{ steps.changed-files-specific.outputs.all_changed_files }}
     steps:
       - name: checkout
@@ -28,7 +27,7 @@ jobs:
   build-and-update:
     needs: get-changed-files
     runs-on: ubuntu-latest
-    if: ${{ needs.get-changed-files.outputs.files_have_changed }} == 'true'
+    if: contains(${{ needs.get-changed-files.outputs.all_changed_files }}, '.yaml')
     steps:
       - name: checkout
         uses: actions/checkout@v3
