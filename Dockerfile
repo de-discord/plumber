@@ -7,4 +7,3 @@ RUN pip3 install -r /plumber/requirements.txt
 WORKDIR /plumber/plumber
 
 ENTRYPOINT ["python3"]
-CMD ["args"]
