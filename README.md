@@ -10,6 +10,14 @@ The bot runs entirely in Github Actions. It does not require a server and does n
 ### Contributing
 Contributions from the community are welcome, both in terms of the code and bot functionality, and especially in the content included in the `yaml` files. Please open a pull request against the `main` branch. Your changes will have to be reviewed by a code owner (i.e. one of the organization maintainers). If approved and merged, your changes will soon be reflected in the server.
 
+#### Local Development
+Once you clone the repository you can built the image like so from the directory root: `docker build -t plumber . `
+
+The application can then be run with: `docker run -e DISCORD_TOKEN=$DISCORD_TOKEN plumber client.py <files>`
+`<files>` here is a series of files corresponding to the yaml files in the `plumber/yaml/` directory. They should be in the format of `plumber/yaml/<filename>.yaml`. So in order to execute an update on the `faq.yaml` file and the `rules.yaml` file, run: `docker run -e DISCORD_TOKEN=$DISCORD_TOKEN plumber client.py plumber/yaml/faq.yaml plumber/yaml/rules.yaml`
+
+Note: You will need to create your own Discord application to be used for development. Once that is done you can generate a bot token to be passed in to the above command as `$DISCORD_TOKEN`. Your bot user will also need to be added to a server. At this time there is no centralized development server so you should create your own and add your bot user there. You will also need to update the channel mapping in `plumber/constants.py` to point to channels in your development server.
+
 #### Desired Features
 - [ ] Show formatted embed as comment on PR if yaml file changed
 - [ ] Add a check of embed length and split into multiple embeds if maximum length exceeded
