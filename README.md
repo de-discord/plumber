@@ -1,7 +1,7 @@
 A basic Discord bot to manage content such as rules, resources, and FAQs for the Data Engineering Discord server.
 
 ## Overview
-Each file in the `plumber/yaml/` directory maps to a channel in the Data Engineering Discord server. The channel mapping can be found in `/plumber/constants.py`. 
+Each file in the `plumber/yaml/` directory maps to a channel in the Data Engineering Discord server. The channel mapping can be found in `plumber/constants.py`. 
 
 On a push to the `main` branch (e.g. when merging  a pull request) if any files in the `yaml` directory have been modified then the corresponding channel will be updated. A channel being *updated* means that any previous posts in that channel by the bot user will be purged and the content of the modified yaml file will be posted as an embed in the channel. This same process can be run on-demand via the Actions page. See `.github/workflows/` for the Github Actions workflow files.
 
