@@ -19,10 +19,10 @@ class Plumber(discord.Client):
             channel_info = utils.map_channels(file)
             channel = client.get_channel(channel_info.get("id"))
 
-            await channel.purge(check=self.is_me)
-
             content = utils.parse_yaml(file)
             embed = utils.create_embed(content)
+
+            await channel.purge(check=self.is_me)
 
             await channel.send(embed=embed)
 
