@@ -9,3 +9,7 @@ The bot runs entirely in Github Actions. It does not require a server and does n
 
 ### Contributing
 Contributions from the community are welcome, both in terms of the code and bot functionality, and especially in the content included in the `yaml` files. Please open a pull request against the `main` branch. Your changes will have to be reviewed by a code owner (i.e. one of the organization maintainers). If approved and merged, your changes will soon be reflected in the server.
+
+#### Desired Features
+- [ ] Show formatted embed as comment on PR if yaml file changed
+- [ ] Add a check of embed length and split into multiple embeds if maximum length exceeded
