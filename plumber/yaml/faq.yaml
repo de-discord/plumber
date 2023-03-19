@@ -1,0 +1,53 @@
+What is Data Engineering?:
+  - "Modern-day Data Engineering is a subset of software engineering that focuses on moving, storing, and structuring data for use in applications or reporting."
+
+What does a Data Engineer do?:
+  - "Responsibilities are going to change depending on the company you work for and what seniority level you are at but generally speaking most data engineers do the following:"
+  - "⦁ Gather data requirements such as how long the data needs to be stored, how it will be used and what people and systems need access to the data."
+  - "⦁ Maintain metadata about the data such as what technology manages the data, data documentation, how the data is secured, the source of the data and the ultimate owner of the data."
+  - "⦁ Ensure security and governance for the data using centralized security controls like LDAP, encrypting the data, and auditing access to the data."
+  - "⦁ Store the data using specialized technologies that are optimized for the particular use of the data, such as a relational database, a NoSQL database, or blob storage."
+  - "⦁ Process data for specific needs using tools that access data from different sources, transform and enrich the data, summarize the data and store the data in the storage system."
+
+
+What is the difference between a Data Engineer and X?:
+  - "⦁ Data Engineer: Uses a combination of software engineering best practices and database design to build scalable data pipelines, data integrations, and data models for use in applications and reports. See [Getting Started With Data Engineering](https://dataengineering.wiki/Guides/Getting+Started+With+Data+Engineering) for a list of tools/concepts to learn."
+  - "⦁ BI Engineer/BI Developer: Uses primarily GUI tools like SSIS to build ETL pipelines, build data models for reports, and even may build the reports themselves. This role is similar in many ways to a Data Engineer but differs in tooling and skillsets required. It is sometimes seen as a pathway to becoming a Data Engineer."
+  - "⦁ Backend Engineer: This type of engineer is usually responsible for writing server side scripts and APIs that interact with an application. Although they integrate applications with data they do not usually build data pipelines or the models in the database for analysis and are instead more focused on the application side."
+What is the difference between a Data Engineer and X? (continued):
+  - "⦁ Database Administrator: Focuses on making sure the database and infrastructure is available and secure (i.e. backing up data, user management, server usage). They do not typically build within the database itself."
+  - "⦁ Data Analyst: Uses data for basic to medium complexity analysis and builds reports and dashboards. This role will typically require a good grasp of SQL and reporting tools but relies on an engineer for the data."
+  - "⦁ Data Scientist: Uses data for more in-depth analysis and visualizations. Typically the work is more research based and sometimes one will work on a product like a machine learning model."
+
+
+What skills do I need to become a Data Engineer?:
+  - "There is no one set of tools that will get you a job as a Data Engineer. It will depend on the company, industry, and the need for data engineering where you live. The skills below are listed in order of general importance."
+  - "⦁ Soft skills"
+  - "⦁ SQL"
+  - "⦁ Data Modeling"
+  - "⦁ Scripting language (Python, Java, or Scala)"
+  - "⦁ Indexing & Query Optimization"
+  - "⦁ Cloud platform (Amazon Web Services, Microsoft Azure, or Google Cloud Platform)"
+  - "⦁ Infrastructure as code"
+  - "⦁ Batch Data Processing"
+  - "⦁ Relational Database"
+  - "⦁ Non-relational Database"
+  - "⦁ Online Transaction Processing"
+  - "⦁ Online Analytical Processing"
+  - "⦁ Data Pipeline"
+  - "⦁ Infrastructure as code"
+  - "⦁ Reporting tools (Tableau, Superset, Metabase)"
+  - "If you would like to see the minimum requirements (generally) for different seniority levels, see [What skills do I need to become a Data Engineer](https://dataengineering.wiki/FAQ/What+skills+do+I+need+to+become+a+Data+Engineer)"
+
+What are the best resources for learning about Data Engineering?:
+  - "⦁ You can find a collection of recommended resources on the [Data Engineering Wiki](https://dataengineering.wiki/Learning+Resources)"
+  - "⦁ <#991876122788765766> Discord channel"
+
+How can I transition into Data Engineering?:
+  - "It's fairly common for people to transition into Data Engineering from another data-related role. The [most common roles that people have successfully transitioned from](https://www.reddit.com/r/dataengineering/comments/peoguf/data_engineers_that_transitioned_from_a_noncs/) are: Data Analyst, Business Intelligence Analyst or Developer, Backend Engineer, and Data Scientist. However, there are plenty of people who transitioned from other roles not listed above."
+  - "The general advice is to learn the [core skills needed to become a data engineer](https://dataengineering.wiki/FAQ/What+skills+do+I+need+to+become+a+Data+Engineer) and then either try to get some real-world experience at your current workplace or do a project to showcase your skills."
+How can I transition into Data Engineering? (continued):
+  - "This question has been asked in a variety of different ways so we encourage you to search the posts below but if you believe your situation is different, please ask the community!"
+  - "[Top Posts on Transitioning to Data Engineering](https://www.reddit.com/r/dataengineering/search/?q=transition&restrict_sr=1&sort=top)"
+  - "[Data Engineering Project Examples](https://www.reddit.com/r/dataengineering/?f=flair_name%3A%22Personal%20Project%20Showcase%22)"
+
