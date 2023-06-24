@@ -15,9 +15,6 @@ def parse_yaml(filepath: str) -> dict:
 
 
 def map_channels(filename: str) -> dict:
-
-    mapping = constants.CHANNELS
-
     print(f"Input file: {filename}")
     filename = filename.split("/")[-1]
     filename = filename.split(".")[0]
@@ -31,8 +28,8 @@ def map_channels(filename: str) -> dict:
     return channel_info
 
 
-def create_embed(content: dict) -> discord.Embed:
-    embed = discord.Embed()
+def create_embed(content: dict, title: str = None) -> discord.Embed:
+    embed = discord.Embed(title=title)
     for k, v in content.items():
         embed.add_field(name=k, value="\n".join(v), inline=False)
 
