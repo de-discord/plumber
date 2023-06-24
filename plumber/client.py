@@ -5,23 +5,36 @@ import utils
 
 from typing import Any, List
 
+from constants import PR_CHANNEL
+
 
 class Plumber(discord.Client):
     def __init__(
-        self, *, intents: discord.Intents, changed: List[str], **options: Any
+        self,
+        *,
+        intents: discord.Intents,
+        changed: List[str],
+        purge: bool,
+        **options: Any
     ) -> None:
         super().__init__(intents=intents, **options)
         self.changed = changed
+        self.purge = purge
 
     async def on_ready(self) -> None:
         for file in self.changed:
             channel_info = utils.map_channels(file)
-            channel = client.get_channel(channel_info.get("id"))
+
+            if self.purge:
+                channel = client.get_channel(channel_info.get("id"))
+            else:
+                channel = client.get_channel(PR_CHANNEL)
 
             content = utils.parse_yaml(file)
             embed = utils.create_embed(content, channel_info.get("title"))
 
-            await channel.purge(check=self.is_me)
+            if self.purge:
+                await channel.purge(check=self.is_me)
 
             await channel.send(embed=embed)
 
@@ -34,6 +47,7 @@ class Plumber(discord.Client):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("files", nargs="+")
+    parser.add_argument("--purge", action="store_true")
     args = parser.parse_args()
 
     try:
@@ -44,5 +58,5 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    client = Plumber(intents=intents, changed=args.files)
+    client = Plumber(intents=intents, changed=args.files, purge=args.purge)
     client.run(token)
