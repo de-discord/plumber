@@ -1,5 +1,5 @@
 CHANNELS = {
-    "rules": {"id": 826520848147152946, "name": "#rules"},
-    "resources": {"id": 991876122788765766, "name": "#resources"},
-    "faq": {"id": 826521251832135750, "name": "#faq"},
+    "rules": {"id": 704890807525572649, "title": "Server Rules"},
+    "resources": {"id": 704890807525572649, "title": "Curated Resources"},
+    "faq": {"id": 704890807525572649, "title": "Frequently Asked Questions"},
 }

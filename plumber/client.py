@@ -14,13 +14,12 @@ class Plumber(discord.Client):
         self.changed = changed
 
     async def on_ready(self) -> None:
-
         for file in self.changed:
             channel_info = utils.map_channels(file)
             channel = client.get_channel(channel_info.get("id"))
 
             content = utils.parse_yaml(file)
-            embed = utils.create_embed(content)
+            embed = utils.create_embed(content, channel_info.get("title"))
 
             await channel.purge(check=self.is_me)
 
