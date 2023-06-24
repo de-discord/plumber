@@ -1,7 +1,7 @@
 name: Post a test message when a PR is opened
 on:
   pull_request:
-    types: [opened, edited]
+    types: [synchronize]
 
 jobs:
   get-changed-files:
