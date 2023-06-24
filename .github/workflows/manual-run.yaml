@@ -21,4 +21,4 @@ jobs:
         run: docker build . -t plumber
       - name: run-client
         run: |
-          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py plumber/yaml/${{ inputs.file }}.yaml
+          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py plumber/yaml/${{ inputs.file }}.yaml --purge
