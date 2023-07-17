@@ -1,8 +1,7 @@
-name: Update server content based on tracked YAML files
+name: Post a test message when a PR is opened
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [synchronize]
 
 jobs:
   get-changed-files:
@@ -34,4 +33,4 @@ jobs:
       - name: Run step if any file(s) in the yaml folder change
         run: |
           echo "One or more files in the yaml folder has changed."
-          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py ${{ needs.get-changed-files.outputs.changed_files }} --purge
+          docker run -e DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }} plumber client.py ${{ needs.get-changed-files.outputs.changed_files }}
